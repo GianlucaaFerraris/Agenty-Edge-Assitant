@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "434844018a6218ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "f3bdc3670eed3fa3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6eeb40774195e636",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hardware - Fundamentos & Definiciones/FLOPS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "FLOPS"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9d1ed85d8389abc4",
+    "type": "split",
+    "children": [
+      {
+        "id": "a479ebc9380e725c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4339b098db7c654f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "3d9b0da84a7163e0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "22a628f54f8e025c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 337.5
+  },
+  "right": {
+    "id": "e3bfbe215cc233ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3c96a31c01c6832",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4369b3329375166b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Fundamentos Hardware/FLOPS.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for FLOPS"
+            }
+          },
+          {
+            "id": "7a48601c929743ec",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Fundamentos Hardware/FLOPS.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from FLOPS"
+            }
+          },
+          {
+            "id": "a0ae7e459ebf1a90",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7405f8dc55ddc18b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "8ab79f61d206eace",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Fundamentos Hardware/FLOPS.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of FLOPS"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "6eeb40774195e636",
+  "lastOpenFiles": [
+    "Hardware - Fundamentos & Definiciones/Ancho de Banda de Memoria.md",
+    "Hardware - Fundamentos & Definiciones/Latencia de Inferencia.md",
+    "Hardware - Fundamentos & Definiciones/Inferencia.md",
+    "Hardware - Fundamentos & Definiciones/FLOPS.md",
+    "Hardware - Fundamentos & Definiciones/Cuantización.md",
+    "Hardware - Fundamentos & Definiciones/KV Caching.md",
+    "Hardware - Fundamentos & Definiciones/Latencia.md",
+    "Hardware - Fundamentos & Definiciones/Benchmark.md",
+    "NVIDIA - Conceptos & Placas/NVIDIA Jetson Orin Nano.md",
+    "Radxa/Radxa Rock 5 Model B.md",
+    "Radxa",
+    "Untitled.md",
+    "LLM - Conceptos & Modelos/LLM.md",
+    "Machine Learning - Fundamentos & Definiciones/Red Neuronal.md",
+    "Machine Learning - Fundamentos & Definiciones/Deep Learning.md",
+    "Machine Learning - Fundamentos & Definiciones/Fine-Tuning.md",
+    "Machine Learning - Fundamentos & Definiciones/Edge AI.md",
+    "PPS - Informes/Fase 1 - Auditoria de Hardware y Benchmarking/1.1 - Análisis de Cómputo.md",
+    "PPS - Informes/Plan de Actividades.md",
+    "PPS - Informes/Fase 1 - Auditoria de Hardware y Benchmarking",
+    "Tokens.md",
+    "PPS - Informes",
+    "Machine Learning - Fundamentos & Definiciones/Token.md",
+    "Software - Programas Utilizados & Definiciones",
+    "LLM - Conceptos & Modelos/QWen 2.5 7B.md",
+    "Machine Learning - Fundamentos & Definiciones/Prompt.md",
+    "Machine Learning - Fundamentos & Definiciones/Retropropagación.md",
+    "NVIDIA - Conceptos & Placas/CUDA.md",
+    "Fine-Tuning.md",
+    "Machine Learning - Fundamentos & Definiciones/QLoRA.md",
+    "LLM - Conceptos & Modelos",
+    "NVIDIA - Conceptos & Placas",
+    "Imagenes",
+    "Pasted image 20260210171240.png",
+    "Machine Learning - Fundamentos & Definiciones",
+    "Hardware - Fundamentos & Definiciones"
+  ]
+}

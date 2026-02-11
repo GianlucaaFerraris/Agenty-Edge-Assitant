@@ -1,0 +1,10 @@
+/* Para el modo Lectura */
+.markdown-rendered p {
+  text-align: justify !important;
+  text-justify: inter-word;
+}
+
+/* Para el modo Edición (Live Preview) */
+.markdown-source-view.mod-cm6 .cm-line {
+  text-align: justify !important;
+}
