@@ -183,8 +183,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "6eeb40774195e636",
+  "active": "4339b098db7c654f",
   "lastOpenFiles": [
+    "Imagenes",
     "Hardware - Fundamentos & Definiciones/Ancho de Banda de Memoria.md",
     "Hardware - Fundamentos & Definiciones/Latencia de Inferencia.md",
     "Hardware - Fundamentos & Definiciones/Inferencia.md",
@@ -214,11 +215,10 @@
     "Machine Learning - Fundamentos & Definiciones/Retropropagación.md",
     "NVIDIA - Conceptos & Placas/CUDA.md",
     "Fine-Tuning.md",
-    "Machine Learning - Fundamentos & Definiciones/QLoRA.md",
     "LLM - Conceptos & Modelos",
     "NVIDIA - Conceptos & Placas",
     "Imagenes",
-    "Pasted image 20260210171240.png",
+    "Imagenes/Pasted image 20260210171240.png",
     "Machine Learning - Fundamentos & Definiciones",
     "Hardware - Fundamentos & Definiciones"
   ]

@@ -2,14 +2,14 @@
 
 **Edge AI** es el paradigma de computación que consiste en ejecutar algoritmos de Inteligencia Artificial directamente en dispositivos locales (hardware embebido), sin necesidad de conectividad a la nube o procesamiento en servidores externos.
 
-En el contexto de este proyecto, el "Edge" está representado por la plataforma [[NVIDIA Jetson Orin Nano]].
+En el contexto de este proyecto, el "Edge" está representado por la plataforma [NVIDIA Jetson Orin Nano](../NVIDIA%20-%20Conceptos%20&%20Placas/NVIDIA%20Jetson%20Orin%20Nano.md).
 
 ---
 ## <font color="#de7802">2. Pilares Técnicos del Proyecto en el Edge</font>
 
 ### <font color="#fac08f">A. Latencia y Determinismo</font>
 
-Al procesar la [[Inferencia]] del LLM localmente, eliminamos la [[Latencia]] de red ($L_{network}$). La latencia total depende exclusivamente del rendimiento del hardware:
+Al procesar la [Inferencia](../Hardware%20-%20Fundamentos%20&%20Definiciones/Inferencia.md) del LLM localmente, eliminamos la [Latencia](../Hardware%20-%20Fundamentos%20&%20Definiciones/Latencia.md) de red ($L_{network}$). La latencia total depende exclusivamente del rendimiento del hardware:
 
 $$\text{Latencia Total} = \text{Latencia de Inferencia} + \text{Latencia de Pre-procesamiento}$$
 
@@ -27,16 +27,16 @@ A diferencia de los modelos en la nube que consumen kilowatts en centros de dato
 
 ## <font color="#de7802">3. El Desafío del "Resource-Constrained Computing"</font>
 
-Implementar un modelo de la familia [[QWen 2.5 7B]] en el Edge nos enfrenta a tres limitaciones físicas que este proyecto documentará:
+Implementar un modelo de la familia [QWen 2.5 7B](../LLM%20-%20Conceptos%20&%20Modelos/QWen%202.5%207B.md) en el Edge nos enfrenta a tres limitaciones físicas que este proyecto documentará:
 
-1. **Compute Bound:** La capacidad de cálculo bruto medida en [[FLOPS]].
-2. **Memory Bound:** El cuello de botella del ancho de banda de memoria ($\text{GB/s}$) que limita los [[Token]]/segundo.
+1. **Compute Bound:** La capacidad de cálculo bruto medida en [FLOPS](../Hardware%20-%20Fundamentos%20&%20Definiciones/FLOPS.md).
+2. **Memory Bound:** El cuello de botella del ancho de banda de memoria ($\text{GB/s}$) que limita los [Token](Token.md)/segundo.
 3. **Thermal Throttling:** La gestión de calor en dispositivos compactos sin ventilación industrial.
 
 ## <font color="#de7802">4. Técnicas de Adaptación para Edge AI</font>
 
-Para que un LLM sea viable en mi [[NVIDIA Jetson Orin Nano]], el proyecto aplicará:
+Para que un LLM sea viable en mi [NVIDIA Jetson Orin Nano](../NVIDIA%20-%20Conceptos%20&%20Placas/NVIDIA%20Jetson%20Orin%20Nano.md), el proyecto aplicará:
 
 - **Cuantización:** Reducción de la precisión de los pesos (ej. de FP16 a INT4).
-- [[Fine-Tuning]] ([[QLoRA]]): Adaptación del modelo sin re-entrenar todos sus parámetros.
-- **Inferencia Acelerada:** Uso de núcleos [[CUDA]] (NVIDIA) para desplazar la carga de trabajo fuera de la CPU general.
+- [Fine-Tuning](Fine-Tuning.md) ([QLoRA](QLoRA.md)): Adaptación del modelo sin re-entrenar todos sus parámetros.
+- **Inferencia Acelerada:** Uso de núcleos [CUDA](../NVIDIA%20-%20Conceptos%20&%20Placas/CUDA.md) (NVIDIA) para desplazar la carga de trabajo fuera de la CPU general.
