@@ -1,4 +1,4 @@
-# Edge-AI-ESL-Assistant: Multi-SBC Agent for English Learning
+# Edge AI Assistant: Multi-SBC Agent for Learning & Other Tasks
 
 Este proyecto consiste en el desarrollo e implementación de un asistente inteligente de respuesta agéntica, diseñado para funcionar íntegramente en el "Edge" (computación en el borde). El sistema actúa como un tutor de inglés (ESL) e ingeniería capaz de corregir gramática, mantener conversaciones fluidas y gestionar tareas locales, priorizando la privacidad y la baja latencia. Además, cuenta con otras herramientas de agencia como hablar a través de Whatsapp, navegar en la web, etc.
 
