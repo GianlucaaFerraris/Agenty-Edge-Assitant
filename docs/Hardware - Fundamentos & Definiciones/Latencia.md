@@ -4,6 +4,7 @@ La **latencia** es el tiempo transcurrido entre el estímulo (entrada del usuari
 
 $$\text{Latencia Total} = L_{STT} + L_{Inferencia} + L_{TTS} + L_{Hardware}$$
 
+---
 ## <font color="#de7802">2. Desglose de Componentes</font>
 
 1. **Latencia STT (Speech-to-Text):** Tiempo que tarda Faster-Whisper en transcribir el audio a texto. Depende de la longitud del audio y de la potencia del procesador.
@@ -11,6 +12,7 @@ $$\text{Latencia Total} = L_{STT} + L_{Inferencia} + L_{TTS} + L_{Hardware}$$
 3. **Latencia TTS (Text-to-Speech):** Tiempo que tarda Piper en convertir la respuesta del LLM en ondas sonoras.
 4. **Latencia de E/S (I/O):** Retraso de los drivers de audio y el bus del sistema.
 
+---
 ## <font color="#de7802">3. Implicación en el Proyecto</font>
 
 El éxito de un tutor de inglés depende de la **Latencia Percibida**. 

@@ -2,7 +2,7 @@
 
 **Edge AI** es el paradigma de computación que consiste en ejecutar algoritmos de Inteligencia Artificial directamente en dispositivos locales (hardware embebido), sin necesidad de conectividad a la nube o procesamiento en servidores externos.
 
-En el contexto de este proyecto, el "Edge" está representado por la plataforma [NVIDIA Jetson Orin Nano](../NVIDIA%20-%20Conceptos%20&%20Placas/NVIDIA%20Jetson%20Orin%20Nano.md).
+En el contexto de este proyecto, el "Edge" está representado por la plataforma [NVIDIA Jetson Orin Nano](../NVIDIA%20-%20Conceptos%20&%20SBC/NVIDIA%20Jetson%20Orin%20Nano.md).
 
 ---
 ## <font color="#de7802">2. Pilares Técnicos del Proyecto en el Edge</font>
@@ -35,8 +35,8 @@ Implementar un modelo de la familia [QWen 2.5 7B](../LLM%20-%20Conceptos%20&%20M
 
 ## <font color="#de7802">4. Técnicas de Adaptación para Edge AI</font>
 
-Para que un LLM sea viable en mi [NVIDIA Jetson Orin Nano](../NVIDIA%20-%20Conceptos%20&%20Placas/NVIDIA%20Jetson%20Orin%20Nano.md), el proyecto aplicará:
+Para que un LLM sea viable en mi [NVIDIA Jetson Orin Nano](../NVIDIA%20-%20Conceptos%20&%20SBC/NVIDIA%20Jetson%20Orin%20Nano.md), el proyecto aplicará:
 
 - **Cuantización:** Reducción de la precisión de los pesos (ej. de FP16 a INT4).
 - [Fine-Tuning](Fine-Tuning.md) ([QLoRA](QLoRA.md)): Adaptación del modelo sin re-entrenar todos sus parámetros.
-- **Inferencia Acelerada:** Uso de núcleos [CUDA](../NVIDIA%20-%20Conceptos%20&%20Placas/CUDA.md) (NVIDIA) para desplazar la carga de trabajo fuera de la CPU general.
+- **Inferencia Acelerada:** Uso de núcleos [CUDA](../NVIDIA%20-%20Conceptos%20&%20SBC/CUDA.md) (NVIDIA) para desplazar la carga de trabajo fuera de la CPU general.

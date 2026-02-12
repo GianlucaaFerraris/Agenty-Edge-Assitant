@@ -1,7 +1,7 @@
 
 #### <font color="#de7802">Fase 1: Auditoría de Hardware y Benchmarking (Semanas 1-2)</font>
 
-- [ ] **Análisis de cómputo**: Estudio de los TFLOPS y ancho de banda de memoria en tokens/segundo de la Rock Model 5B de Radxa (NPU/GPU) o Orin Jetson Nano de Nvidia.
+- [x] **Análisis de cómputo**: Estudio de los TFLOPS y ancho de banda de memoria en tokens/segundo de la Rock Model 5B de Radxa (NPU/GPU) o Orin Jetson Nano de Nvidia.
     
 - [ ] **Configuración de entorno**: Instalación de sistemas operativos optimizados (Ubuntu Rockchip con Kernel 6.1+). Configuración de herramientas de aceleración: Rockchip MPP (Media Process Platform) para video, RKNN-Toolkit 2 para la NPU, o TensorRT en caso de utilizar la Jetson.
     

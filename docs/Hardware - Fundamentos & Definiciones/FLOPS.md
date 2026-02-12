@@ -7,6 +7,7 @@ Es el calculo para obtener el numero de FLOPS de un procesador, calcular FLOPs e
 
 Por otro lado, la complejidad computacional de una [Red Neuronal](../Machine%20Learning%20-%20Fundamentos%20&%20Definiciones/Red%20Neuronal.md) se mide por **FLOPs** (esta es **FLOPs** con *s* minúscula por simplemente *Floating Point Operations* en plural). Cuenta específicamente el numero de calculos matemáticos  (el numero de sumas y multiplicaciones) que una NN (Neural Network) debe realizar para procesar una entrada, en nuestro caso un [Token](../Machine%20Learning%20-%20Fundamentos%20&%20Definiciones/Token.md). Por esto mismo, es el standar dentro de los modelos de [Deep Learning](../Machine%20Learning%20-%20Fundamentos%20&%20Definiciones/Deep%20Learning.md) para poder determinar que tan "pesado" para el hardware un modelo es. Mientras mayor sea la métrica de FLOPs, mas energía y costo computacional va a requerir el modelo para ser ejecutado. Por otro lado, mientras 
 
+---
 ## <font color="#de7802">2. Factores relevantes para FLOPS y FLOPs</font>
 
 Los factores que afectan a la métrica son:
@@ -16,6 +17,7 @@ Los factores que afectan a la métrica son:
 - [Ancho de Banda de Memoria](Ancho%20de%20Banda%20de%20Memoria.md): Si nuestra data no puede ser suministrada al procesador rapidamente tambien va a afectar la performance, siendo un cuello de botella del flujo de datos y por lo tanto menor el numero de nuestra métrica FLOPS.
 - **Eficiencia Algorítmica**: si nuestra red neuronal está bien construida va a necesitar de menos calculos para poder procesar un token y por lo tanto menor su FLOPs (mas eficiente para correr localmente).
 
+---
 ## <font color="#de7802">3. Otros Datos</font>
 
 El benchmark utilizado academicamente para poder obtener el numero de FLOPS se lo llama **LINPACK**, el cual resuelve un sistema denso de ecuaciones lineales. Generalmente el resultado está en **TFLOPS** por la magnitud del numero en **teras** que es *10E12*). 
