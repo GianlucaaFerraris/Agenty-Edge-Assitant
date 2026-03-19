@@ -81,17 +81,58 @@ def detect_intent(text: str) -> str:
 
 def detect_intent_from_active_mode(text: str, active_mode: str) -> str:
     """
-    Desde un modo activo (english/engineering), detecta si el mensaje
-    es una interrupción de agente o sigue siendo parte del modo actual.
+    Desde un modo activo (english/engineering), clasifica el mensaje en:
+      - exit:        quiere salir del modo actual (salir, menu, stop, etc.)
+      - switch:      quiere cambiar a otro modo (inglés, ingeniería)
+      - agent:       quiere una tool de agente (tarea, calendario, wpp, búsqueda)
+      - continue:    sigue conversando en el modo actual
+
+    Las keywords de salida se chequean primero por string matching
+    para evitar que el LLM las malinterprete.
     """
+    # 1. Keywords de salida — siempre tienen prioridad, sin llamar al LLM
+    EXIT_KEYWORDS = {
+        "salir", "exit", "quit", "menu", "menú", "stop",
+        "salir de este modo", "salir del modo", "volver al menú",
+        "volver al menu", "cambiar de modo",
+    }
+    text_lower = text.lower().strip()
+    if text_lower in EXIT_KEYWORDS:
+        return "exit"
+    # Chequeo parcial para frases como "quiero salir" o "me quiero ir al menu"
+    if any(kw in text_lower for kw in ("salir", "volver al men", "cambiar de modo")):
+        return "exit"
+
+    # 2. Cambio de modo — detectar si pide explícitamente otro modo
+    other_mode = "engineering" if active_mode == "english" else "english"
+    SWITCH_HINTS = {
+        "english":     ["practicar inglés", "practicar ingles", "tutor de inglés",
+                        "tutor de ingles", "quiero inglés", "quiero ingles",
+                        "modo inglés", "modo ingles", "aprender inglés"],
+        "engineering": ["tutor de ingeniería", "tutor de ingenieria",
+                        "modo ingeniería", "modo ingenieria",
+                        "pregunta técnica", "pregunta tecnica",
+                        "consultar algo técnico"],
+    }
+    for hint in SWITCH_HINTS.get(other_mode, []):
+        if hint in text_lower:
+            return "switch"
+
+    # 3. LLM para los casos ambiguos
     prompt = (
         f"El usuario está en modo '{active_mode}' y dijo: \"{text}\"\n\n"
-        f"¿Es esto una solicitud de agente (tarea, calendario, recordatorio, WhatsApp, búsqueda web)\n"
-        f"o es parte normal de la conversación del modo {active_mode}?\n\n"
-        f"Respondé con exactamente una palabra: agent o continue."
+        f"Clasificá con EXACTAMENTE una palabra:\n"
+        f"- agent:    pide una herramienta (tarea, calendario, recordatorio, WhatsApp, búsqueda web)\n"
+        f"- switch:   quiere cambiar a otro modo (inglés, ingeniería)\n"
+        f"- exit:     quiere salir o volver al menú\n"
+        f"- continue: sigue conversando en el modo actual\n\n"
+        f"Respondé con exactamente una palabra: agent, switch, exit, o continue."
     )
     result = _chat_silent([{"role": "user", "content": prompt}], max_tokens=5)
-    return "agent" if "agent" in result else "continue"
+    if "agent"    in result: return "agent"
+    if "switch"   in result: return "switch"
+    if "exit"     in result: return "exit"
+    return "continue"
 
 
 # ── Greeting ──────────────────────────────────────────────────────────────────
