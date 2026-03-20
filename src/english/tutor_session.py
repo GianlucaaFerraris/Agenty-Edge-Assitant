@@ -35,9 +35,9 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 TOPICS_PATH = next(
     (p for p in [
         os.path.join(_HERE, "topics.json"),
-        os.path.join(_HERE, "..", "finetuning", "topics.json"),
-        os.path.join(_HERE, "..", "..", "src", "finetuning", "topics.json"),
-        os.path.join(_HERE, "..", "..", "finetuning", "topics.json"),
+        os.path.join(_HERE, "..", "finetuning", "datasets", "topics.json"),
+        os.path.join(_HERE, "..", "..", "src", "finetuning", "datasets", "topics.json"),
+        os.path.join(_HERE, "..", "..", "finetuning", "datasets", "topics.json"),
     ] if os.path.exists(p)),
     None
 )
